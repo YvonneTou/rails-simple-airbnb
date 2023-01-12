@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row my-3">
+    <h1>All Flats in London</h1>
+    <% @flats.each do |flat| %>
+      <div class="card m-3" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= flat.name %></h5>
+          <p class="card-text text-truncate"><%= flat.address %></p>
+          <p><i class="fa-solid fa-user-group"></i><%= flat.number_of_guests %> | <i class="fa-solid fa-sterling-sign"></i><%= flat.price_per_night %></p>
+        </div>
+        <div class="card-body">
+          <a href="#" class="card-link link-primary">More info</a>
+          <a href="#" class="card-link link-warning">Edit</a>
+          <a href="#" class="card-link link-danger">Remove</a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
